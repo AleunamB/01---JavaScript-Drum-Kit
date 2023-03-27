@@ -59,7 +59,14 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
-
+  window.addEventListener("keydown", function(e) {
+    // console.log(e.keyCode); getting the keyCode according to the pressed letter
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); //getting the audio for the pressed key
+    //console.log(audio);
+    if (!audio) return; //if there is no audio, stop the function from running all together
+    audio.currentTime = 0; //rewind to the start to be played immediately
+    audio.play(); //plays the audio but can't be played as often I want in a short period -> audio.currentTime = 0
+  });
 </script>
 
 
