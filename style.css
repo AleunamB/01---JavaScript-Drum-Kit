@@ -1,7 +1,15 @@
-html {
-  font-size: 10px;
-  background: url('./background.jpg') bottom center;
-  background-size: cover;
+.container {
+  width: 100vw;
+  height: 80vh;
+}
+
+.img {
+  width: 640px;
+  height: 500px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 body,html {
@@ -13,13 +21,13 @@ body,html {
 .keys {
   display: flex;
   flex: 1;
-  min-height: 100vh;
+  min-height: 38vh;
   align-items: center;
   justify-content: center;
 }
 
 .key {
-  border: .4rem solid black;
+  border: .2rem solid rgb(69, 24, 17);
   border-radius: .5rem;
   margin: 1rem;
   font-size: 1.5rem;
@@ -27,15 +35,14 @@ body,html {
   transition: all .07s ease;
   width: 10rem;
   text-align: center;
-  color: white;
-  background: rgba(0,0,0,0.4);
-  text-shadow: 0 0 .5rem black;
+  color: rgb(69, 24, 17);
+  background: rgba(169, 166, 166, 0.4);
 }
 
 .playing {
   transform: scale(1.1);
-  border-color: #ffc600;
-  box-shadow: 0 0 1rem #ffc600;
+  border-color: #f7c413;
+  box-shadow: 0 0 1rem #f7c413;
 }
 
 kbd {
