@@ -66,7 +66,18 @@
     if (!audio) return; //if there is no audio, stop the function from running all together
     audio.currentTime = 0; //rewind to the start to be played immediately
     audio.play(); //plays the audio but can't be played as often I want in a short period -> audio.currentTime = 0
+
+    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+    //console.log(key); the div's with class .key are now selected
+    key.classList.add('playing'); //the class .playing will be added
   });
+
+  const keys = document.querySelectorAll('.key') //getting every key-div of the page in an array
+  key.forEach(key => key.addEventListener('transitionend', removeTransition));
+  //because it's an array - necessary to use forEach, each key gets an eventListener (transitionend), when it ends it should be removed (removeTransition)
+
+
+
 </script>
 
 
