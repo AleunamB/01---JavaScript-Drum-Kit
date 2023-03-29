@@ -85,7 +85,7 @@
 
   const keys = document.querySelectorAll('.key') //getting every key-div of the page in an array
   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-  //because it's an array - necessary to use forEach, each key gets an eventListener (transitionend), when it ends it should be removed (removeTransition)
+  //NodeList - forEach, each key gets an eventListener (transitionend), when it ends it should be removed (removeTransition)
 
   window.addEventListener("keydown", playSound);
 
